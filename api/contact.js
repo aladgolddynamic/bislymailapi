@@ -4,7 +4,6 @@ const resend = new Resend(process.env.RESEND_API_KEY || 're_7sse958a_ExA9ywcquVq
 
 export default async function handler(req, res) {
     // CORS configuration
-    res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader('Access-Control-Allow-Origin', '*'); // Update with your actual domain later
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS,POST');
     res.setHeader(
