@@ -37,9 +37,9 @@ export default async function handler(req, res) {
 
         // Generate a premium HTML email template
         const emailHtml = `
-      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f4f7f9; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e1e8ed;">
+      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background-color: #FAFAFA; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E5E5E5;">
         <!-- Header -->
-        <div style="background: linear-gradient(135deg, #0d47a1 0%, #00acc1 100%); padding: 30px 20px; text-align: center;">
+        <div style="background: linear-gradient(135deg, #991B1B 0%, #1A1A1A 100%); padding: 30px 20px; text-align: center;">
           <h1 style="color: #ffffff; margin: 0; font-size: 24px; letter-spacing: 1px; text-transform: uppercase;">New Inquiry Received</h1>
           <p style="color: rgba(255,255,255,0.9); margin: 10px 0 0 0; font-size: 16px;">${service}</p>
         </div>
@@ -47,7 +47,7 @@ export default async function handler(req, res) {
         <!-- Body -->
         <div style="padding: 30px; background-color: #ffffff;">
           <div style="margin-bottom: 25px;">
-            <h2 style="color: #0d47a1; font-size: 18px; border-bottom: 2px solid #00acc1; padding-bottom: 8px; margin-bottom: 20px;">Contact Details</h2>
+            <h2 style="color: #991B1B; font-size: 18px; border-bottom: 2px solid #991B1B; padding-bottom: 8px; margin-bottom: 20px;">Contact Details</h2>
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
                 <td style="padding: 8px 0; color: #666; width: 120px;"><strong>Full Name:</strong></td>
@@ -55,7 +55,7 @@ export default async function handler(req, res) {
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td>
-                <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #00acc1; text-decoration: none;">${email}</a></td>
+                <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #991B1B; text-decoration: none;">${email}</a></td>
               </tr>
               ${phone ? `
               <tr>
@@ -71,15 +71,15 @@ export default async function handler(req, res) {
           </div>
 
           <div style="margin-top: 30px;">
-            <h2 style="color: #0d47a1; font-size: 18px; border-bottom: 2px solid #00acc1; padding-bottom: 8px; margin-bottom: 15px;">Message</h2>
-            <div style="background-color: #f9fbff; padding: 20px; border-radius: 8px; border-left: 5px solid #00acc1; color: #444; line-height: 1.6; font-style: italic;">
+            <h2 style="color: #991B1B; font-size: 18px; border-bottom: 2px solid #991B1B; padding-bottom: 8px; margin-bottom: 15px;">Message</h2>
+            <div style="background-color: #F5F5F5; padding: 20px; border-radius: 8px; border-left: 5px solid #991B1B; color: #444; line-height: 1.6; font-style: italic;">
               ${message.replace(/\n/g, '<br>')}
             </div>
           </div>
         </div>
 
         <!-- Footer -->
-        <div style="background-color: #0d47a1; padding: 20px; text-align: center; color: #ffffff; font-size: 13px;">
+        <div style="background-color: #1A1A1A; padding: 20px; text-align: center; color: #ffffff; font-size: 13px;">
           <p style="margin: 0 0 10px 0;"><strong>Grandstack Nigeria</strong></p>
           <p style="margin: 0; color: rgba(255,255,255,0.7);">Building the next generation of scalable solutions.</p>
           <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
