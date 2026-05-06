@@ -80,11 +80,11 @@ export default async function handler(req, res) {
 
         <!-- Footer -->
         <div style="background-color: #1A1A1A; padding: 20px; text-align: center; color: #ffffff; font-size: 13px;">
-          <p style="margin: 0 0 10px 0;"><strong>Grandstack Nigeria</strong></p>
+          <p style="margin: 0 0 10px 0;"><strong>Bisly Nigeria</strong></p>
           <p style="margin: 0; color: rgba(255,255,255,0.7);">Building the next generation of scalable solutions.</p>
           <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
             <p style="margin: 0;">This inquiry was sent via the official contact form.</p>
-            <p style="margin: 5px 0 0 0;">&copy; ${new Date().getFullYear()} Grandstack Nigeria. All rights reserved.</p>
+            <p style="margin: 5px 0 0 0;">&copy; ${new Date().getFullYear()} Bisly Nigeria. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -92,8 +92,8 @@ export default async function handler(req, res) {
 
         // Send email via Resend
         const { data, error } = await resend.emails.send({
-            from: process.env.CONTACT_FORM_FROM || 'Grandstack Nigeria <onboarding@resend.dev>',
-            to: [process.env.CONTACT_FORM_TO || 'info@grandstack.com.ng'],
+            from: process.env.CONTACT_FORM_FROM || 'Bisly Nigeria <onboarding@resend.dev>',
+            to: [process.env.CONTACT_FORM_TO || 'info@Bisly .com.ng'],
             subject: `Contact Form Inquiry [${fullName}] - ${service}`,
             html: emailHtml,
         });

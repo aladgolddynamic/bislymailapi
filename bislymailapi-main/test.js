@@ -3,7 +3,7 @@
 // Command to run this file: node test.js
 
 async function runTest() {
-    const url = 'http://127.0.0.1:3000/api/contact';
+    const url = '/contact';
 
     const payload = {
         fullName: 'Test Automation',
